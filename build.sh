@@ -1,4 +1,8 @@
 #!/bin/bash
 dotnet tool restore
 dotnet paket install
-dotnet build
+rm -rf build
+dotnet publish -o ./build
+pushd build || exit
+zip -r build.zip .
+popd || exit
