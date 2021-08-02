@@ -1,5 +1,3 @@
-dotnet tool restore
-
-dotnet paket install
+./build.sh
 
 func start
